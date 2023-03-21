@@ -3,7 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class UserControl : MonoBehaviour
-{
+{   
+    //Player Bullets
+    public GameObject bulletPrefab;
+    int bulletSpeed = 600;
+    
     // Player Variables
     private Rigidbody2D _rigidbody;
     public int playerJumpVal = 10;
@@ -50,6 +54,12 @@ public class UserControl : MonoBehaviour
 
         if(onTerrain && Input.GetButton("Jump")){
             _rigidbody.AddForce(new Vector2(0,playerJumpVal));
+        }
+
+        if (Input.GetButtonDown("0")){
+            // making a copy of bullet
+            GameObject newBullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+            newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(bulletSpeed, 0));
         }
     }
 }
