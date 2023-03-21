@@ -7,6 +7,10 @@ public class UserControl : MonoBehaviour
     private Rigidbody2D _rigidbody;
     public int playerJumpVal = 10;
     public int playerSpeed = 5;
+
+    public Transform playerShoes;
+    public LayerMask terrain;
+    bool onTerrain = false;
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
