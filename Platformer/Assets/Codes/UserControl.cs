@@ -8,6 +8,9 @@ public class UserControl : MonoBehaviour
     private Rigidbody2D _rigidbody;
     public int playerJumpVal = 10;
     public int playerSpeed = 5;
+
+    // Animation variables
+    private Animator _animator;
     
 
     // Variables to manage jumping
@@ -17,7 +20,9 @@ public class UserControl : MonoBehaviour
 
     //Start
     void Start()
-    {
+    {   
+        //Get animator component
+        _animator = GetComponent<Animator>();
         _rigidbody = GetComponent<Rigidbody2D>();
     }
 
@@ -31,6 +36,8 @@ public class UserControl : MonoBehaviour
         if (horizontalMovement < 0 && xDirection > 0 || horizontalMovement > 0 && xDirection < 1){
             transform.localScale *= new Vector2(-1,1);
         }
+
+        _animator.SetFloat("Speed", Mathf.Abs(horizontalMovement));
     }
 
     // Update
