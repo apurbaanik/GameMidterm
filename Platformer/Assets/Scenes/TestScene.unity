@@ -922,7 +922,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.04014635, y: -0.013382196}
+  m_Offset: {x: -0.04068756, y: 0.0010019541}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -933,7 +933,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.74649525, y: 1.7032356}
+  m_Size: {x: 0.7223282, y: 1.6744673}
   m_EdgeRadius: 0
 --- !u!114 &699253975
 MonoBehaviour:
@@ -947,7 +947,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d825a01a8ea5a61418f0cd057b5f71c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerJumpVal: 22
+  playerJumpVal: 30
   playerSpeed: 7
   playerShoes: {fileID: 1323476706}
   terrain:
@@ -1323,8 +1323,8 @@ MonoBehaviour:
   m_LookaheadTime: 0
   m_LookaheadSmoothing: 0
   m_LookaheadIgnoreY: 0
-  m_XDamping: 1
-  m_YDamping: 1
+  m_XDamping: 3
+  m_YDamping: 3
   m_ZDamping: 1
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
@@ -1774,7 +1774,7 @@ Transform:
   m_GameObject: {fileID: 1695012667}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.14, y: -4.73, z: 0}
-  m_LocalScale: {x: 20.63, y: 0.1, z: 1}
+  m_LocalScale: {x: 25, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

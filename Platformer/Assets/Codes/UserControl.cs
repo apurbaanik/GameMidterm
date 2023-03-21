@@ -25,12 +25,18 @@ public class UserControl : MonoBehaviour
     void FixedUpdate() {
         float horizontalMovement = Input.GetAxis("Horizontal") * playerSpeed;
         _rigidbody.velocity = new Vector2(horizontalMovement, _rigidbody.velocity.y);
+
+        float xDirection = transform.localScale.x;
+
+        if (horizontalMovement < 0 && xDirection > 0 || horizontalMovement > 0 && xDirection < 1){
+            transform.localScale *= new Vector2(-1,1);
+        }
     }
 
     // Update
     void Update()
     {
-        onTerrain = Physics2D.OverlapCircle(playerShoes.position, .3f, terrain);
+        onTerrain = Physics2D.OverlapCircle(playerShoes.position, .2f, terrain);
         if(onTerrain && Input.GetButton("Jump")){
             _rigidbody.AddForce(new Vector2(0,playerJumpVal));
         }
