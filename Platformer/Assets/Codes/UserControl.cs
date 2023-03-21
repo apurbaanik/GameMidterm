@@ -23,7 +23,8 @@ public class UserControl : MonoBehaviour
     }
     void Update()
     {
-        if(Input.GetButton("Jump")){
+        onTerrain = Physics2D.OverlapCircle(playerShoes.position,.3f, terrain);
+        if(onTerrain && Input.GetButton("Jump")){
             _rigidbody.AddForce(new Vector2(0,playerJumpVal));
         }
     }
