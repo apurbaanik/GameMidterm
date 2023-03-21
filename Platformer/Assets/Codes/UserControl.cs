@@ -6,7 +6,8 @@ public class UserControl : MonoBehaviour
 {   
     //Player Bullets
     public GameObject bulletPrefab;
-    int bulletSpeed = 600;
+    public Transform spawnPoint;
+    public int bulletSpeed = 600;
     
     // Player Variables
     private Rigidbody2D _rigidbody;
@@ -56,9 +57,8 @@ public class UserControl : MonoBehaviour
             _rigidbody.AddForce(new Vector2(0,playerJumpVal));
         }
 
-        if (Input.GetButtonDown("0")){
-            // making a copy of bullet
-            GameObject newBullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+        if (Input.GetMouseButtonDown(0)){
+            GameObject newBullet = Instantiate(bulletPrefab, spawnPoint.position, Quaternion.identity);
             newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(bulletSpeed, 0));
         }
     }
