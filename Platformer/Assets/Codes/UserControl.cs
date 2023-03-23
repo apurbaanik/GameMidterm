@@ -26,9 +26,8 @@ public class UserControl : MonoBehaviour
     //Start
     void Start()
     {   
-        //Get animator component
-        _animator = GetComponent<Animator>();
         _rigidbody = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();  //Get animator component
     }
 
     // Fixed Update
@@ -49,9 +48,7 @@ public class UserControl : MonoBehaviour
     void Update()
     {
         onTerrain = Physics2D.OverlapCircle(playerShoes.position, .2f, terrain);
-
-        // UNCOMMENT LINE BELOW AFTER SETTING ANIMATOR COMPONENT (Set the boolean that is made in the animator to the value of onTerrain)
-        // _animator.SetBool("Grounded", onTerrain);
+        _animator.SetBool("Grounded", onTerrain);
 
         if(onTerrain && Input.GetButton("Jump")){
             _rigidbody.AddForce(new Vector2(0,playerJumpVal));
