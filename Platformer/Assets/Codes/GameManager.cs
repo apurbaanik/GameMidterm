@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class GameManager : MonoBehaviour
@@ -14,6 +15,7 @@ public class GameManager : MonoBehaviour
 
     public TextMeshProUGUI chickenScoreInterface;
     public TextMeshProUGUI healthInterface;
+
 
     private void Awake()
     {
@@ -54,9 +56,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (health == 0){
-            publicvar.playerDead = true;
-        }
+       
         #if !UNITY_WEBGL
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -64,6 +64,23 @@ public class GameManager : MonoBehaviour
         }
         #endif
     }
-        
-    
+
+    IEnumerator Wait5sec(float time) {
+        yield return new WaitForSeconds(time);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    void FixedUpdate() {
+         if (health == 0 && !publicvar.playerDead){
+            publicvar.playerDead = true;
+            publicvar._animatorPlayer.SetTrigger("Dead");
+            StartCoroutine(Wait2sec(20f));
+            publicvar._animatorPlayer.SetTrigger("FullDead");
+            StartCoroutine(Wait5sec(1f));
+        }
+    }
+
+    IEnumerator Wait2sec(float time) {
+        yield return new WaitForSeconds(time);
+    }
 }
