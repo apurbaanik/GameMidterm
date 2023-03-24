@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UserControl : MonoBehaviour
 {   
@@ -57,6 +58,11 @@ public class UserControl : MonoBehaviour
         if (Input.GetMouseButtonDown(0)){
             GameObject newBullet = Instantiate(bulletPrefab, spawnPoint.position, Quaternion.identity);
             newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(bulletSpeed, 0));
+        }
+        
+        // Reload scene if you fall off the map
+        if(_rigidbody.position.y < -50){
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }
