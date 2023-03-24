@@ -58,15 +58,17 @@ public class UserControl : MonoBehaviour
     // Update
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)){
+        if (Input.GetKeyDown("e")){
             GameObject newBullet = Instantiate(bulletPrefab, spawnPoint.position, Quaternion.identity);
             newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(xDirection*bulletSpeed, 0)); 
+            _animator.SetTrigger("Shooting");
         }
 
         // NOTE: GO TO game over screen after destroying
         if (publicvar.playerDead == true){
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             publicvar.playerDead = false;
+            _animator.SetBool("Death", false);
         }
         
         // Reload scene if you fall off the map
