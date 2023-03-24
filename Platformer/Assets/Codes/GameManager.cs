@@ -17,14 +17,12 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        // if(GameObject.FindObjectsOfType<GameManager>().Length > 1)
-        // {
-        //     Destroy(gameObject);
-        // }
-        // else{
-        //     DontDestroyOnLoad(gameObject);
-        // }
+         if(GameObject.FindObjectsOfType<GameManager>().Length > 1)
+        {  
+             Destroy(gameObject);
+        }
     }
+         
     void Start()
     {        
         scoreInterface.text = "Coins:" + coins;
