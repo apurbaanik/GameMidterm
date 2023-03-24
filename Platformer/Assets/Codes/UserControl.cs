@@ -19,6 +19,7 @@ public class UserControl : MonoBehaviour
 
     // Animation variables
     private Animator _animator;
+    private AudioSource _audioSource;
     
 
     // Variables to manage jumping
@@ -31,6 +32,7 @@ public class UserControl : MonoBehaviour
     {   
         _rigidbody = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();  //Get animator component
+        _audioSource = GetComponent<AudioSource>();
     }
 
     // Fixed Update
@@ -66,14 +68,19 @@ public class UserControl : MonoBehaviour
 
         // NOTE: GO TO game over screen after destroying
         if (publicvar.playerDead == true){
+            _animator.SetTrigger("Dead");
+            wait5sec(5);
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             publicvar.playerDead = false;
-            _animator.SetBool("Death", false);
         }
         
         // Reload scene if you fall off the map
         if(_rigidbody.position.y < -20){
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
+    }
+
+    IEnumerator wait5sec(int time) {
+        yield return new WaitForSeconds(time);
     }
 }
