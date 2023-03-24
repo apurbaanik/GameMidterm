@@ -62,11 +62,8 @@ public class UserControl : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0)){
             
-            
             GameObject newBullet = Instantiate(bulletPrefab, spawnPoint.position, Quaternion.identity);
             newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(xDirection*bulletSpeed, 0));
-            
-            
             
         }
         

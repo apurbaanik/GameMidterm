@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
 
     public void incrementChickenCounter(int value){
         chickensCollected += value;
-        chickenScoreInterface.text = "Coins: " + coins;
+        chickenScoreInterface.text = "Chickens: " + chickensCollected;
     }
 
     public void decrementHealthCounter(int value){
