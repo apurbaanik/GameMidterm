@@ -14,10 +14,8 @@ public class UserControl : MonoBehaviour
     private Rigidbody2D _rigidbody;
     public int playerJumpVal = 10;
     public int playerSpeed = 5;
-
     public float xDirection;
 
-    bool turned = false;
 
     // Animation variables
     private Animator _animator;
@@ -61,10 +59,14 @@ public class UserControl : MonoBehaviour
     void Update()
     {
         if (Input.GetMouseButtonDown(0)){
-            
             GameObject newBullet = Instantiate(bulletPrefab, spawnPoint.position, Quaternion.identity);
-            newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(xDirection*bulletSpeed, 0));
-            
+            newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(xDirection*bulletSpeed, 0)); 
+        }
+
+        // NOTE: GO TO game over screen after destroying
+        if (publicvar.playerDead == true){
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            publicvar.playerDead = false;
         }
         
         // Reload scene if you fall off the map

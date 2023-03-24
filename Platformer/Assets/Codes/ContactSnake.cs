@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySnake : MonoBehaviour
+public class ContactSnake : MonoBehaviour
 {
     Rigidbody2D _rigidbody2D;
     GameManager _gameManager;
@@ -13,10 +13,9 @@ public class EnemySnake : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if (other.CompareTag("Bullet")){
-            _gameManager.incrementEnemyScoreCounter(10);
-            Destroy(gameObject);
-            Destroy(other.gameObject);
+        if (other.CompareTag("Player")){
+            _gameManager.decrementHealthCounter(1);
+            Destroy(transform.parent.gameObject);
         }
     }
 }
