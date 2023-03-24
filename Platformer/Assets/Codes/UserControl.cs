@@ -15,6 +15,8 @@ public class UserControl : MonoBehaviour
     public int playerJumpVal = 10;
     public int playerSpeed = 5;
 
+    public float xDirection;
+
     bool turned = false;
 
     // Animation variables
@@ -38,18 +40,12 @@ public class UserControl : MonoBehaviour
         float horizontalMovement = Input.GetAxis("Horizontal") * playerSpeed;
         _rigidbody.velocity = new Vector2(horizontalMovement, _rigidbody.velocity.y);
 
-        float xDirection = transform.localScale.x;
+        xDirection = transform.localScale.x;
+
 
         if (horizontalMovement < 0 && xDirection > 0 || horizontalMovement > 0 && xDirection < 1){
-            turned = true;
             transform.localScale *= new Vector2(-1,1);
-            spawnPoint.transform.localScale *= new Vector2(-1,1);
         }
-        else{
-            turned = false;
-        }
-
-        
 
         _animator.SetFloat("Speed", Mathf.Abs(horizontalMovement));
 
@@ -64,16 +60,13 @@ public class UserControl : MonoBehaviour
     // Update
     void Update()
     {
-
         if (Input.GetMouseButtonDown(0)){
             
+            
             GameObject newBullet = Instantiate(bulletPrefab, spawnPoint.position, Quaternion.identity);
-            if (turned != true){
-                newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(bulletSpeed, 0));
-            }
-            else{
-                newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2((-1*bulletSpeed), 0));
-            }
+            newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(xDirection*bulletSpeed, 0));
+            
+            
             
         }
         
