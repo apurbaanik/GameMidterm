@@ -5,14 +5,17 @@ using UnityEngine;
 public class CoinPickup : MonoBehaviour
 {
     Rigidbody2D _rigidbody2D;
+    GameManager _gameManager;
     void Start()
     {
+        _gameManager = GameObject.FindObjectOfType<GameManager>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Player")){
-            
+            _gameManager.incrementCoinCounter(1);
+            Destroy(gameObject);
         }
     }
 }
