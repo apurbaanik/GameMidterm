@@ -25,30 +25,30 @@ public class GameManager : MonoBehaviour
          
     void Start()
     {        
-        scoreInterface.text = "Coins:" + coins;
-        healthInterface.text = "Health:" + health;  
-        enemyInterface.text = "Destruction Score:" + enemyPoints;
-        chickenScoreInterface.text = "Chickens Collected:" + chickensCollected;
+        scoreInterface.text = "Coins: " + coins;
+        healthInterface.text = "Health: " + health;  
+        enemyInterface.text = "Destruction Score: " + enemyPoints;
+        chickenScoreInterface.text = "Chickens Collected: " + chickensCollected;
     }
 
     public void incrementCoinCounter(int value){
         coins += value;
-        scoreInterface.text = "Coins:" + coins;
+        scoreInterface.text = "Coins: " + coins;
     }
 
     public void incrementChickenCounter(int value){
         chickensCollected += value;
-        chickenScoreInterface.text = "Chickens:" + chickensCollected;
+        chickenScoreInterface.text = "Chickens: " + chickensCollected;
     }
 
     public void incrementEnemyScoreCounter(int value){
         enemyPoints += value;
-        enemyInterface.text = "Destruction Score:" + enemyPoints;
+        enemyInterface.text = "Destruction Score: " + enemyPoints;
     }
 
     public void decrementHealthCounter(int value){
         health -= value;
-        healthInterface.text = "Health:" + health;
+        healthInterface.text = "Health: " + health;
     }
 
     // Update is called once per frame
