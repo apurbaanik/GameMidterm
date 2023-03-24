@@ -61,7 +61,7 @@ public class UserControl : MonoBehaviour
         }
         
         // Reload scene if you fall off the map
-        if(_rigidbody.position.y < -50){
+        if(_rigidbody.position.y < -20){
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
