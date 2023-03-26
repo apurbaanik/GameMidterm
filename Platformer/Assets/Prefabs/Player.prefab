@@ -139,6 +139,9 @@ MonoBehaviour:
   playerJumpVal: 60
   playerSpeed: 5
   xDirection: 0
+  _animator: {fileID: 0}
+  _audioSource: {fileID: 0}
+  gunClip: {fileID: 8300000, guid: 29203d6c1844149a6962a4f834414767, type: 3}
   playerShoes: {fileID: 8654071812998681647}
   terrain:
     serializedVersion: 2
