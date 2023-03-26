@@ -16,11 +16,9 @@ public class UserControl : MonoBehaviour
     public int playerSpeed = 5;
     public float xDirection;
 
-
-
     // Animation variables
     public Animator _animator;
-    private AudioSource _audioSource;
+    public AudioSource _audioSource;
     
     // Variables to manage jumping
     public Transform playerShoes;
