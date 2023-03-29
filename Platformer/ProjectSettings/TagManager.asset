@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Coin
   - Bullet
+  - Farmer
   layers:
   - Default
   - TransparentFX

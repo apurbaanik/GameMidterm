@@ -55,10 +55,13 @@ public class UserControl : MonoBehaviour
         onTerrain = Physics2D.OverlapCircle(playerShoes.position, .2f, terrain);
         _animator.SetBool("Grounded", onTerrain);
 
-        if(onTerrain && Input.GetButton("Jump")){
+        if (SceneManager.GetActiveScene().name != "SecretScene"){
+            if(onTerrain && Input.GetButton("Jump")){
             _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, 0);
             _rigidbody.AddForce(new Vector2(0,playerJumpVal));
+            }
         }
+        
     }
 
     // Update

@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
 
     public void incrementCoinCounter(int value){
         coins += value;
+        publicvar.numberCoins += 1;
         scoreInterface.text = "Coins: " + coins;
     }
 
