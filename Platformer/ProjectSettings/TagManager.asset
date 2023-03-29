@@ -7,6 +7,7 @@ TagManager:
   - Coin
   - Bullet
   - Spike
+  - Farmer
   layers:
   - Default
   - TransparentFX

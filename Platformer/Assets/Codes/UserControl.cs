@@ -18,7 +18,11 @@ public class UserControl : MonoBehaviour
 
     // Animation variables
     public Animator _animator;
+
+    // Player audio variables
     public AudioSource _audioSource;
+    public AudioClip shootSound;
+    public AudioClip deadSound;
     
     // Variables to manage jumping
     public Transform playerShoes;
@@ -55,16 +59,20 @@ public class UserControl : MonoBehaviour
         onTerrain = Physics2D.OverlapCircle(playerShoes.position, .2f, terrain);
         _animator.SetBool("Grounded", onTerrain);
 
-        if(onTerrain && Input.GetButton("Jump")){
+        if (SceneManager.GetActiveScene().name != "SecretScene"){
+            if(onTerrain && Input.GetButton("Jump")){
             _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, 0);
             _rigidbody.AddForce(new Vector2(0,playerJumpVal));
+            }
         }
+        
     }
 
     // Update
     void Update()
     {
         if(publicvar.playerDead) {
+            _audioSource.PlayOneShot(deadSound);
             return;
         }
 
@@ -72,6 +80,7 @@ public class UserControl : MonoBehaviour
         // if (Input.GetMouseButtonDown(0)){
             GameObject newBullet = Instantiate(bulletPrefab, spawnPoint.position, Quaternion.identity);
             newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(xDirection*bulletSpeed, 0)); 
+            _audioSource.PlayOneShot(shootSound);
             _animator.SetTrigger("Shooting");
         }
 
