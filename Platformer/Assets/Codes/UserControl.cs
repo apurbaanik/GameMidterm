@@ -18,7 +18,10 @@ public class UserControl : MonoBehaviour
 
     // Animation variables
     public Animator _animator;
+
+    // Player audio variables
     public AudioSource _audioSource;
+    public AudioClip shootSound;
     
     // Variables to manage jumping
     public Transform playerShoes;
@@ -75,6 +78,7 @@ public class UserControl : MonoBehaviour
         // if (Input.GetMouseButtonDown(0)){
             GameObject newBullet = Instantiate(bulletPrefab, spawnPoint.position, Quaternion.identity);
             newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(xDirection*bulletSpeed, 0)); 
+            _audioSource.PlayOneShot(shootSound);
             _animator.SetTrigger("Shooting");
         }
 
