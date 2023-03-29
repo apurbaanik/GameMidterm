@@ -22,6 +22,7 @@ public class UserControl : MonoBehaviour
     // Player audio variables
     public AudioSource _audioSource;
     public AudioClip shootSound;
+    public AudioClip deadSound;
     
     // Variables to manage jumping
     public Transform playerShoes;
@@ -71,6 +72,7 @@ public class UserControl : MonoBehaviour
     void Update()
     {
         if(publicvar.playerDead) {
+            _audioSource.PlayOneShot(deadSound);
             return;
         }
 
