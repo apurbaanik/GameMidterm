@@ -91,5 +91,4 @@ public class UserControl : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
-
 }
