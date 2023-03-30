@@ -75,9 +75,9 @@ public class GameManager : MonoBehaviour
          if (health == 0 && !publicvar.playerDead){
             publicvar.playerDead = true;
             publicvar._animatorPlayer.SetTrigger("Dead");
-            StartCoroutine(Wait2sec(20f));
+            StartCoroutine(Wait2sec(2f));
             publicvar._animatorPlayer.SetTrigger("FullDead");
-            StartCoroutine(Wait5sec(1f));
+            StartCoroutine(Wait5sec(3f));
         }
     }
 
