@@ -10,6 +10,11 @@ public class EnemyCrocodile : MonoBehaviour
     public AudioSource _audioSource;
     public AudioClip destroyedSound;
 
+    public GameObject bulletPrefab;
+    public Transform spawnPoint;
+    public int bulletSpd = 400;
+    public float xDirection;
+
     Transform player;
 
     void Start() {
@@ -20,6 +25,7 @@ public class EnemyCrocodile : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
         StartCoroutine(Move());
+        StartCoroutine(Shoot());
     }
 
     void Update() {
@@ -27,6 +33,8 @@ public class EnemyCrocodile : MonoBehaviour
             || ((player.position.x < transform.position.x) && (transform.localScale.x > 0))) {
                 transform.localScale *= new Vector2(-1, 1);
         }
+
+        xDirection = transform.localScale.x;
     }
 
     IEnumerator Move() {
@@ -36,6 +44,14 @@ public class EnemyCrocodile : MonoBehaviour
         }
     }
 
+    IEnumerator Shoot() {
+        while (true) {
+            yield return new WaitForSeconds(Random.Range(3f, 6f));
+            GameObject newBullet = Instantiate(bulletPrefab, spawnPoint.position, Quaternion.identity);
+            newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(xDirection * bulletSpd, 0));
+        }
+    }
+    
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Bullet")) {
             _audioSource.PlayOneShot(destroyedSound);

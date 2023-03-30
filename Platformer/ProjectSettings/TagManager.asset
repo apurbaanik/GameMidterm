@@ -9,6 +9,7 @@ TagManager:
   - Spike
   - Farmer
   - CollisionBox
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX
