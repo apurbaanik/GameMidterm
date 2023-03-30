@@ -34,7 +34,7 @@ public class EnemyFox : MonoBehaviour
     IEnumerator Move() {
         while (true) {
             yield return new WaitForSeconds(Random.Range(1f, 2f));
-            _rigidbody2D.AddForce(new Vector2(transform.localScale.x * 200, 100));
+            _rigidbody2D.AddForce(new Vector2(transform.localScale.x * 400, 100));
         }
     }
 

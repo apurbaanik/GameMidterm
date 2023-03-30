@@ -8,15 +8,16 @@ TagManager:
   - Bullet
   - Spike
   - Farmer
+  - CollisionBox
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - EnemyCollider
   - Water
   - UI
   - Player
-  - 
+  - Enemy
   - 
   - 
   - 
