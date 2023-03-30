@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
          
     void Start()
     {        
-        scoreInterface.text = "Coins: " + coins;
+        scoreInterface.text = "Eggs: " + coins;
         healthInterface.text = "Health: " + health;  
         enemyInterface.text = "Destruction Score: " + enemyPoints;
         chickenScoreInterface.text = "Chickens Collected: " + chickensCollected;
@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
     public void incrementCoinCounter(int value){
         coins += value;
         publicvar.numberCoins += 1;
-        scoreInterface.text = "Coins: " + coins;
+        scoreInterface.text = "Eggs: " + coins;
     }
 
     public void incrementChickenCounter(int value){

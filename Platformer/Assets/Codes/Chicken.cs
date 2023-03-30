@@ -9,6 +9,8 @@ public class Chicken : MonoBehaviour
 
     public AudioSource _audioSource;
     public AudioClip collectChicken;
+    public AudioClip destroyedSound;
+
     void Start()
     {
         _audioSource = GetComponent<AudioSource>();
@@ -21,6 +23,12 @@ public class Chicken : MonoBehaviour
             _audioSource.PlayOneShot(collectChicken);
             _gameManager.incrementChickenCounter(1);
             Destroy(gameObject);
+        }
+
+        if (other.CompareTag("Bullet")) {
+            _audioSource.PlayOneShot(destroyedSound);
+            Destroy(gameObject);
+            Destroy(other.gameObject);
         }
     }
 }
