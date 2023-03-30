@@ -25,11 +25,11 @@ public class Chicken : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (other.CompareTag("Bullet")) {
+/*         if (other.CompareTag("Bullet")) {
             _audioSource.PlayOneShot(destroyedSound);
             Destroy(gameObject);
             Destroy(other.gameObject);
-        }
+        } */
     }
 }
 
