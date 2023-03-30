@@ -32,7 +32,7 @@ public class EnemyCrocodile : MonoBehaviour
     IEnumerator Move() {
         while (true) {
             yield return new WaitForSeconds(Random.Range(1f, 4f));
-            _rigidbody2D.AddForce(new Vector2(transform.localScale.x * (Random.Range(100, 200)), 0));
+            _rigidbody2D.AddForce(new Vector2(transform.localScale.x * (Random.Range(200, 400)), 0));
         }
     }
 

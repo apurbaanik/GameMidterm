@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2810093161550008084}
   - component: {fileID: 2810093161550008085}
   - component: {fileID: 2810093161550008086}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Hitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 2810093162478603648}
   - component: {fileID: 2810093162478603649}
   - component: {fileID: -6746108638357143304}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SnakeEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}

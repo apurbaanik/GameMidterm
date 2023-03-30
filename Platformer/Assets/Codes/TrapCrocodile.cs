@@ -19,7 +19,7 @@ public class TrapCrocodile : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Bullet")) {
             _audioSource.PlayOneShot(destroyedSound);
-            _gameManager.incrementEnemyScoreCounter(20);
+            _gameManager.incrementEnemyScoreCounter(10);
             Destroy(gameObject);
             Destroy(other.gameObject);
         }
