@@ -9,5 +9,9 @@ public static class publicvar
     public static bool playerDead = false;
     public static int numberCoins = 0;
 
+    public static int enemyPoints = 0;
+
+    public static int chickensCollected = 0;
+
     public static Animator _animatorPlayer;
 }

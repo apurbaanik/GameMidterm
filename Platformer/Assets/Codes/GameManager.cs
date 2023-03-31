@@ -7,8 +7,8 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     int coins = 0;
-    int chickensCollected = 0;
-    int enemyPoints = 0;
+    
+    
     int health = 3;
     public int totalItems = 1;
     public int level;
@@ -34,8 +34,8 @@ public class GameManager : MonoBehaviour
     {        
         scoreInterface.text = "Eggs: " + coins + " / " + totalItems;
         healthInterface.text = "Health: " + health;  
-        enemyInterface.text = "Score: " + enemyPoints;
-        chickenScoreInterface.text = "Chickens: " + chickensCollected;
+        enemyInterface.text = "Score: " + publicvar.enemyPoints;
+        chickenScoreInterface.text = "Chickens: " + publicvar.chickensCollected;
 
         door.SetActive(false);
     }
@@ -52,13 +52,13 @@ public class GameManager : MonoBehaviour
     }
 
     public void incrementChickenCounter(int value){
-        chickensCollected += value;
-        chickenScoreInterface.text = "Chickens: " + chickensCollected;
+        publicvar.chickensCollected += value;
+        chickenScoreInterface.text = "Chickens: " + publicvar.chickensCollected;
     }
 
     public void incrementEnemyScoreCounter(int value){
-        enemyPoints += value;
-        enemyInterface.text = "Destruction Score: " + enemyPoints;
+        publicvar.enemyPoints += value;
+        enemyInterface.text = "Destruction Score: " + publicvar.enemyPoints;
     }
 
     public void decrementHealthCounter(int value){
@@ -103,6 +103,8 @@ public class GameManager : MonoBehaviour
             StartCoroutine(Wait2sec(2f));
             publicvar._animatorPlayer.SetTrigger("FullDead");
             StartCoroutine(Wait5sec2(2f));
+            publicvar.enemyPoints = 0;
+            publicvar.chickensCollected = 0;
             
         }
     }
