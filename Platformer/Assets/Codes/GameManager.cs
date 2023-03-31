@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     int coins = 0;
     
     
-    int health = 3;
+    int health = 8;
     public int totalItems = 1;
     public int level;
 
@@ -20,6 +20,9 @@ public class GameManager : MonoBehaviour
 
     public TextMeshProUGUI chickenScoreInterface;
     public TextMeshProUGUI healthInterface;
+
+    public AudioSource _audioSource;
+    public AudioClip hurtPlayer;
 
 
     private void Awake()
@@ -32,6 +35,7 @@ public class GameManager : MonoBehaviour
          
     void Start()
     {        
+        _audioSource = GetComponent<AudioSource>();
         scoreInterface.text = "Eggs: " + coins + " / " + totalItems;
         healthInterface.text = "Health: " + health;  
         enemyInterface.text = "Score: " + publicvar.enemyPoints;
@@ -63,6 +67,7 @@ public class GameManager : MonoBehaviour
 
     public void decrementHealthCounter(int value){
         health -= value;
+        _audioSource.PlayOneShot(hurtPlayer);
         healthInterface.text = "Health: " + health;
     }
 

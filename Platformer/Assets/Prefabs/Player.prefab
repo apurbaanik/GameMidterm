@@ -143,7 +143,7 @@ MonoBehaviour:
   _animator: {fileID: 0}
   _audioSource: {fileID: 7731572400960877865}
   shootSound: {fileID: 8300000, guid: 212041828d8a5c1438bab282ffa15ab3, type: 3}
-  hurtSound: {fileID: 8300000, guid: 78ac43b9b826fd04e85afa72bfaab947, type: 3}
+  hurtSound: {fileID: 8300000, guid: 1499d99215b7e0f43864ca0b65087658, type: 3}
   deadSound: {fileID: 8300000, guid: bfc83189916d34a83b4ba4c36b855afe, type: 3}
   playerShoes: {fileID: 8654071812998681647}
   terrain:
