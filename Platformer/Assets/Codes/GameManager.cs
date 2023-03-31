@@ -83,8 +83,17 @@ public class GameManager : MonoBehaviour
     }
 
     IEnumerator Wait5sec(float time) {
+        
         yield return new WaitForSeconds(time);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);    
+        
+    }
+
+    IEnumerator Wait5sec2(float time) {
+        
+        yield return new WaitForSeconds(time);
+        SceneManager.LoadScene("EndGame");  
+        
     }
 
     void FixedUpdate() {
@@ -93,7 +102,8 @@ public class GameManager : MonoBehaviour
             publicvar._animatorPlayer.SetTrigger("Dead");
             StartCoroutine(Wait2sec(2f));
             publicvar._animatorPlayer.SetTrigger("FullDead");
-            StartCoroutine(Wait5sec(2f));
+            StartCoroutine(Wait5sec2(2f));
+            
         }
     }
 
