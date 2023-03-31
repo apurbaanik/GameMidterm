@@ -9,7 +9,12 @@ public class GameManager : MonoBehaviour
     int coins = 0;
     int chickensCollected = 0;
     int enemyPoints = 0;
-     int health = 3;
+    int health = 3;
+    public int totalItems = 1;
+    public int level;
+
+    public GameObject door;
+
     public TextMeshProUGUI scoreInterface;
     public TextMeshProUGUI enemyInterface;
 
@@ -27,16 +32,23 @@ public class GameManager : MonoBehaviour
          
     void Start()
     {        
-        scoreInterface.text = "Eggs: " + coins;
+        scoreInterface.text = "Eggs: " + coins + " / " + totalItems;
         healthInterface.text = "Health: " + health;  
         enemyInterface.text = "Destruction Score: " + enemyPoints;
         chickenScoreInterface.text = "Chickens Collected: " + chickensCollected;
+
+        door.SetActive(false);
     }
 
     public void incrementCoinCounter(int value){
         coins += value;
         publicvar.numberCoins += 1;
-        scoreInterface.text = "Eggs: " + coins;
+        scoreInterface.text = "Eggs: " + coins + " / " + totalItems;
+        
+        if (coins == totalItems) {
+            print("done");
+            door.SetActive(true);
+        }
     }
 
     public void incrementChickenCounter(int value){
@@ -82,5 +94,27 @@ public class GameManager : MonoBehaviour
 
     IEnumerator Wait2sec(float time) {
         yield return new WaitForSeconds(time);
+    }
+
+    public void nextLevel() {
+        if (coins == totalItems) {
+            if (level == 1) {
+                SceneManager.LoadScene("level 2");
+            }
+            else if (level == 2) {
+                SceneManager.LoadScene("SecretScene");
+            }
+            else if (level == 5) {
+                SceneManager.LoadScene("level 3");
+            }
+            else if (level == 3) {
+                SceneManager.LoadScene("level 4");
+            }
+            else {
+                SceneManager.LoadScene("EndGame");
+            }
+        }
+        
+        Destroy(gameObject);
     }
 }

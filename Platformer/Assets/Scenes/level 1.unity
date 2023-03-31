@@ -372,6 +372,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fe29cda6a87f5d488d7fd30a24f34eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  totalItems: 4
+  level: 1
+  door: {fileID: 584566114}
   scoreInterface: {fileID: 489831388}
   enemyInterface: {fileID: 111021894}
   chickenScoreInterface: {fileID: 1940067624}
@@ -1448,6 +1451,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 653e3b38f54f3714d91db5c2a899bca9, type: 3}
+--- !u!1 &584566114 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3850887973450495113, guid: 653e3b38f54f3714d91db5c2a899bca9, type: 3}
+  m_PrefabInstance: {fileID: 584566113}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &586696604 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8752269713831860, guid: 4e2b4babdc560e44ca167db105446822, type: 3}
@@ -2440,7 +2448,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1055639604 stripped
 Transform:
@@ -6148,7 +6156,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5334914562842220239, guid: 54fcc04bb69db426abe68c0f2a25fa0e, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5334914562842220239, guid: 54fcc04bb69db426abe68c0f2a25fa0e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12186,7 +12194,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8654071811320312697, guid: 43784e02d157981428e6e8e8272c0eba, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8654071811320312697, guid: 43784e02d157981428e6e8e8272c0eba, type: 3}
       propertyPath: m_LocalPosition.x

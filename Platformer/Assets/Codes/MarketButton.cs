@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class MarketButton : MonoBehaviour
 {
-    public string level = "level 1";
+    public string level = "level 3";
     public void Accept(){
-        publicvar.numberCoins = -1;
+        publicvar.numberCoins = 0;
         SceneManager.LoadScene(level);
     }
 

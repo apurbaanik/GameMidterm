@@ -152,6 +152,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fe29cda6a87f5d488d7fd30a24f34eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  totalItems: 6
+  level: 2
+  door: {fileID: 588977321}
   scoreInterface: {fileID: 256362749}
   enemyInterface: {fileID: 2092484884}
   chickenScoreInterface: {fileID: 256362748}
@@ -508,7 +511,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4885466568444282351, guid: 13524df10b72045ec8c7ce320d8c3fa8, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4885466568444282351, guid: 13524df10b72045ec8c7ce320d8c3fa8, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1301,6 +1304,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 653e3b38f54f3714d91db5c2a899bca9, type: 3}
+--- !u!1 &588977321 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3850887973450495113, guid: 653e3b38f54f3714d91db5c2a899bca9, type: 3}
+  m_PrefabInstance: {fileID: 588977320}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &593561557
 PrefabInstance:
   m_ObjectHideFlags: 0
