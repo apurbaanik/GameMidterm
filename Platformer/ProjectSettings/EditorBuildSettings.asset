@@ -6,14 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/level 1.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/Scenes/StartGame.unity
     guid: 75c29c5fb3c412645a1e53132284388b
   - enabled: 1
     path: Assets/Scenes/HowToPlay.unity
     guid: 93c5308d034eff643bbe3dd4b6e7a974
+  - enabled: 1
+    path: Assets/Scenes/level 1.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/level 2.unity
     guid: d6d65c33fa17646738a4cac921f4890c
@@ -21,11 +21,11 @@ EditorBuildSettings:
     path: Assets/Scenes/level 3.unity
     guid: 54e2094e0e0ab4f92a877c100b186925
   - enabled: 1
-    path: Assets/Scenes/EndGame.unity
-    guid: b0898b66c5f50ed4392d449b8336da14
-  - enabled: 1
     path: Assets/Scenes/level 4.unity
     guid: 4549303b7154d4047af68b4d1ee37eff
+  - enabled: 1
+    path: Assets/Scenes/EndGame.unity
+    guid: b0898b66c5f50ed4392d449b8336da14
   - enabled: 1
     path: Assets/Scenes/SecretScene.unity
     guid: 12e0d35d6fb572741a13acf2e83dc08f
