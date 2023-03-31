@@ -29,12 +29,17 @@ public class UserControl : MonoBehaviour
     public LayerMask terrain;
     bool onTerrain = false;
 
+    //Game Manager
+
+    GameManager _gameManager;
+
     //Start
     void Start()
     {   
         _rigidbody = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();  //Get animator component
         _audioSource = GetComponent<AudioSource>();
+        _gameManager = GameObject.FindObjectOfType<GameManager>();
         publicvar._animatorPlayer = _animator;
         publicvar.playerDead = false;
     }
@@ -88,6 +93,7 @@ public class UserControl : MonoBehaviour
         
         // Reload scene if you fall off the map
         if(_rigidbody.position.y < -20){
+            _gameManager.decrementHealthCounter(1);
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
