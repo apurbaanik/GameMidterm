@@ -6,11 +6,11 @@ public class ContactSnake : MonoBehaviour
 {
     Rigidbody2D _rigidbody2D;
     GameManager _gameManager;
-    public AudioSource _audioSource;
-    public AudioClip hurtPlayer;
+    //public AudioSource _audioSource;
+    //public AudioClip hurtPlayer;
     void Start()
     {
-        _audioSource = GetComponent<AudioSource>();
+    //    _audioSource = GetComponent<AudioSource>();
         _gameManager = GameObject.FindObjectOfType<GameManager>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
     }
@@ -18,7 +18,7 @@ public class ContactSnake : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Player")){
             // _audioSource.PlayOneShot(hurtPlayer);
-            AudioSource.PlayClipAtPoint(hurtPlayer, gameObject.transform.position);
+        //    AudioSource.PlayClipAtPoint(hurtPlayer, gameObject.transform.position);
             _gameManager.decrementHealthCounter(1);
             Destroy(transform.parent.gameObject);
         }

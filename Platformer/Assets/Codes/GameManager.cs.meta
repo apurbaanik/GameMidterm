@@ -3,7 +3,14 @@ guid: 6fe29cda6a87f5d488d7fd30a24f34eb
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - door: {instanceID: 0}
+  - scoreInterface: {instanceID: 0}
+  - enemyInterface: {instanceID: 0}
+  - chickenScoreInterface: {instanceID: 0}
+  - healthInterface: {instanceID: 0}
+  - _audioSource: {instanceID: 0}
+  - hurtPlayer: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
