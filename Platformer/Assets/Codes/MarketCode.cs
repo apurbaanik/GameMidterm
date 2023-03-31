@@ -12,11 +12,15 @@ public class MarketCode : MonoBehaviour
     public TextMeshProUGUI Line;
     public TextMeshProUGUI ButtonText;
 
+    public AudioSource _audioSource;
+    public AudioClip companion;
+
     void Start()
     {
+        _audioSource = GetComponent<AudioSource>();
         _gameManager = GameObject.FindObjectOfType<GameManager>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
-        Line.text = Line.text = "Market Owner: 'I can't find my coins anywhere!'";
+        Line.text = Line.text = "Market Owner: 'I can't find my eggs anywhere!'";
     }
 
     
@@ -48,7 +52,8 @@ public class MarketCode : MonoBehaviour
     }
 
     IEnumerator Wait3sec3(int time) {
-        Line.text = "Market Owner: 'MY COINS! I'll trade you this special companion for those!'";
+        _audioSource.PlayOneShot(companion);
+        Line.text = "Market Owner: 'MY 9 EGGS! I'll trade you this special companion for those!'";
         Line.enabled = true;
         Line.gameObject.SetActive(true);
         yield return new WaitForSecondsRealtime(time); 
