@@ -142,7 +142,7 @@ MonoBehaviour:
   xDirection: 0
   _animator: {fileID: 0}
   _audioSource: {fileID: 7731572400960877865}
-  shootSound: {fileID: 8300000, guid: 29203d6c1844149a6962a4f834414767, type: 3}
+  shootSound: {fileID: 8300000, guid: 212041828d8a5c1438bab282ffa15ab3, type: 3}
   deadSound: {fileID: 8300000, guid: bfc83189916d34a83b4ba4c36b855afe, type: 3}
   playerShoes: {fileID: 8654071812998681647}
   terrain:
@@ -227,7 +227,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.103
   m_Pitch: 1
   Loop: 0
   Mute: 0

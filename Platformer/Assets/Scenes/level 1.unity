@@ -729,6 +729,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 84882940}
     m_Modifications:
+    - target: {fileID: 147450223112243927, guid: 84b1b05bfbd853c45916101ebb68f550, type: 3}
+      propertyPath: DopplerLevel
+      value: 2.81
+      objectReference: {fileID: 0}
     - target: {fileID: 2810093162478603650, guid: 84b1b05bfbd853c45916101ebb68f550, type: 3}
       propertyPath: m_Name
       value: SnakeEnemy (2)
@@ -2538,7 +2542,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5f113909033884515b24a23386f39751, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.117
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -12168,6 +12172,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7731572400960877865, guid: 43784e02d157981428e6e8e8272c0eba, type: 3}
+      propertyPath: m_Volume
+      value: 0.125
+      objectReference: {fileID: 0}
     - target: {fileID: 8654071811320312691, guid: 43784e02d157981428e6e8e8272c0eba, type: 3}
       propertyPath: m_Name
       value: Player
@@ -12227,7 +12235,7 @@ PrefabInstance:
     - target: {fileID: 8654071811320312703, guid: 43784e02d157981428e6e8e8272c0eba, type: 3}
       propertyPath: shootSound
       value: 
-      objectReference: {fileID: 8300000, guid: 29203d6c1844149a6962a4f834414767, type: 3}
+      objectReference: {fileID: 8300000, guid: 212041828d8a5c1438bab282ffa15ab3, type: 3}
     - target: {fileID: 8654071811320312703, guid: 43784e02d157981428e6e8e8272c0eba, type: 3}
       propertyPath: _audioSource
       value: 
