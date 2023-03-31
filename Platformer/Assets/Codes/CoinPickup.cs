@@ -6,6 +6,8 @@ public class CoinPickup : MonoBehaviour
 {
     Rigidbody2D _rigidbody2D;
     GameManager _gameManager;
+    public AudioSource _audioSource;
+    public AudioClip coinPickSound;
     void Start()
     {
         _gameManager = GameObject.FindObjectOfType<GameManager>();
@@ -14,6 +16,7 @@ public class CoinPickup : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Player")){
+            _audioSource.PlayOneShot(coinPickSound);
             _gameManager.incrementCoinCounter(1);
             Destroy(gameObject);
         }

@@ -10,6 +10,7 @@ public class EnemyCrocodile : MonoBehaviour
     public AudioSource _audioSource;
     public AudioClip destroyedSound;
 
+    public GameObject deadParticleEffect;
     public GameObject bulletPrefab;
     public Transform spawnPoint;
     public int bulletSpd = 400;
@@ -55,6 +56,7 @@ public class EnemyCrocodile : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Bullet")) {
             _audioSource.PlayOneShot(destroyedSound);
+            Instantiate(deadParticleEffect, transform.position, Quaternion.identity);
             _gameManager.incrementEnemyScoreCounter(20);
             Destroy(gameObject);
             Destroy(other.gameObject);

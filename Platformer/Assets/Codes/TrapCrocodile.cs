@@ -6,6 +6,7 @@ public class TrapCrocodile : MonoBehaviour
 {
     Rigidbody2D _rigidbody2D;
     GameManager _gameManager;
+    public GameObject deadParticleEffect;
 
     public AudioSource _audioSource;
     public AudioClip destroyedSound;
@@ -19,6 +20,7 @@ public class TrapCrocodile : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Bullet")) {
             _audioSource.PlayOneShot(destroyedSound);
+            Instantiate(deadParticleEffect, transform.position, Quaternion.identity);
             _gameManager.incrementEnemyScoreCounter(10);
             Destroy(gameObject);
             Destroy(other.gameObject);

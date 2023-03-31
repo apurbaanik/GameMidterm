@@ -6,9 +6,9 @@ public class EnemyFox : MonoBehaviour
 {
     Rigidbody2D _rigidbody2D;
     GameManager _gameManager;
-
     public AudioSource _audioSource;
     public AudioClip destroyedSound;
+    public GameObject deadParticleEffect;
 
     Transform player;
     // Animator _animator;
@@ -41,6 +41,7 @@ public class EnemyFox : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Bullet")) {
             _audioSource.PlayOneShot(destroyedSound);
+            Instantiate(deadParticleEffect, transform.position, Quaternion.identity);
             _gameManager.incrementEnemyScoreCounter(40);
             Destroy(gameObject);
             Destroy(other.gameObject);
