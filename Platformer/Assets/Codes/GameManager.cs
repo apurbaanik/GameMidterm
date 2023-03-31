@@ -34,8 +34,8 @@ public class GameManager : MonoBehaviour
     {        
         scoreInterface.text = "Eggs: " + coins + " / " + totalItems;
         healthInterface.text = "Health: " + health;  
-        enemyInterface.text = "Destruction Score: " + enemyPoints;
-        chickenScoreInterface.text = "Chickens Collected: " + chickensCollected;
+        enemyInterface.text = "Score: " + enemyPoints;
+        chickenScoreInterface.text = "Chickens: " + chickensCollected;
 
         door.SetActive(false);
     }

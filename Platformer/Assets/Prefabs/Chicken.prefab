@@ -149,7 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _audioSource: {fileID: 8478729242353989477}
   collectChicken: {fileID: 8300000, guid: abd744519ebb349e2ad44e3934f2fc0c, type: 3}
-  destroyedSound: {fileID: 0}
+  destroyedSound: {fileID: 8300000, guid: abd744519ebb349e2ad44e3934f2fc0c, type: 3}
 --- !u!82 &8478729242353989477
 AudioSource:
   m_ObjectHideFlags: 0
@@ -168,7 +168,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 0
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
