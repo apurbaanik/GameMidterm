@@ -77,7 +77,6 @@ public class GameManager : MonoBehaviour
         #endif
 
         if (Input.GetKeyDown(KeyCode.Return)) {
-            print("enter");
             coins = totalItems;
             nextLevel();
         }

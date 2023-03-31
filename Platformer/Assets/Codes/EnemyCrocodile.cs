@@ -55,11 +55,18 @@ public class EnemyCrocodile : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Bullet")) {
-            _audioSource.PlayOneShot(destroyedSound);
+            // _audioSource.PlayOneShot(destroyedSound);
+            AudioSource.PlayClipAtPoint(destroyedSound, gameObject.transform.position);
             Instantiate(deadParticleEffect, transform.position, Quaternion.identity);
             _gameManager.incrementEnemyScoreCounter(20);
-            Destroy(gameObject);
             Destroy(other.gameObject);
+            // gameObject.SetActive(false);
+            StartCoroutine(Wait());
+            Destroy(gameObject);
         }
+    }
+
+    IEnumerator Wait() {
+        yield return new WaitForSeconds(10f);
     }
 }

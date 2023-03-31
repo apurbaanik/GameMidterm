@@ -40,11 +40,17 @@ public class EnemyFox : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Bullet")) {
-            _audioSource.PlayOneShot(destroyedSound);
+            // _audioSource.PlayOneShot(destroyedSound);
+            AudioSource.PlayClipAtPoint(destroyedSound, gameObject.transform.position);
             Instantiate(deadParticleEffect, transform.position, Quaternion.identity);
             _gameManager.incrementEnemyScoreCounter(40);
-            Destroy(gameObject);
             Destroy(other.gameObject);
+            StartCoroutine(Wait());
+            Destroy(gameObject);
         }
+    }
+    
+    IEnumerator Wait() {
+        yield return new WaitForSeconds(10f);
     }
 }
