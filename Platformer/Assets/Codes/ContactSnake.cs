@@ -17,7 +17,8 @@ public class ContactSnake : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Player")){
-            _audioSource.PlayOneShot(hurtPlayer);
+            // _audioSource.PlayOneShot(hurtPlayer);
+            AudioSource.PlayClipAtPoint(hurtPlayer, gameObject.transform.position);
             _gameManager.decrementHealthCounter(1);
             Destroy(transform.parent.gameObject);
         }

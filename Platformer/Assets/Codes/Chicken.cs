@@ -20,7 +20,8 @@ public class Chicken : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Player")){
-            _audioSource.PlayOneShot(collectChicken);
+            // _audioSource.PlayOneShot(collectChicken);
+            AudioSource.PlayClipAtPoint(collectChicken, gameObject.transform.position);
             _gameManager.incrementChickenCounter(1);
             Destroy(gameObject);
         }

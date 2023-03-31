@@ -664,17 +664,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 84882940}
     m_Modifications:
-    - target: {fileID: 2810093161550007528, guid: 84b1b05bfbd853c45916101ebb68f550, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: 2810093162478603650, guid: 84b1b05bfbd853c45916101ebb68f550, type: 3}
       propertyPath: m_Name
       value: SnakeEnemy (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2810093162478603650, guid: 84b1b05bfbd853c45916101ebb68f550, type: 3}
-      propertyPath: m_Layer
-      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2810093162478603662, guid: 84b1b05bfbd853c45916101ebb68f550, type: 3}
       propertyPath: m_RootOrder
@@ -3059,7 +3051,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioSource: {fileID: 0}
-  collectChicken: {fileID: 0}
+  collectChicken: {fileID: 8300000, guid: abd744519ebb349e2ad44e3934f2fc0c, type: 3}
   destroyedSound: {fileID: 0}
 --- !u!50 &1171509791
 Rigidbody2D:
@@ -3547,7 +3539,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioSource: {fileID: 0}
-  collectChicken: {fileID: 0}
+  collectChicken: {fileID: 8300000, guid: abd744519ebb349e2ad44e3934f2fc0c, type: 3}
   destroyedSound: {fileID: 0}
 --- !u!50 &1374467149
 Rigidbody2D:
@@ -6089,10 +6081,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 84882940}
     m_Modifications:
-    - target: {fileID: 5223687223658337617, guid: 0dc2244691b740b44a9947539361e385, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5223687223658337619, guid: 0dc2244691b740b44a9947539361e385, type: 3}
       propertyPath: m_Name
       value: crocodile_trap
@@ -11999,10 +11987,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 84882940}
     m_Modifications:
-    - target: {fileID: 5380404808750814226, guid: 75ccaa099b7ef0049a7241e5cea46909, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: 5380404809688546511, guid: 75ccaa099b7ef0049a7241e5cea46909, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -12050,10 +12034,6 @@ PrefabInstance:
     - target: {fileID: 5380404809688546514, guid: 75ccaa099b7ef0049a7241e5cea46909, type: 3}
       propertyPath: m_Name
       value: Crocodile
-      objectReference: {fileID: 0}
-    - target: {fileID: 5380404809688546514, guid: 75ccaa099b7ef0049a7241e5cea46909, type: 3}
-      propertyPath: m_Layer
-      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75ccaa099b7ef0049a7241e5cea46909, type: 3}

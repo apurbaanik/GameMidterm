@@ -20,7 +20,8 @@ public class CoinBlocks : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Player")){
-            _audioSource.PlayOneShot(hitBlock);
+            // _audioSource.PlayOneShot(hitBlock);
+            AudioSource.PlayClipAtPoint(hitBlock, gameObject.transform.position);
             Instantiate(coin, coinSpawnPoint.position, Quaternion.identity);
             Instantiate(coinParticleEffect, coinSpawnPoint.position, Quaternion.identity);
             Destroy(gameObject);

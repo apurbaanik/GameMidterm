@@ -16,7 +16,8 @@ public class CoinPickup : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Player")){
-            _audioSource.PlayOneShot(coinPickSound);
+            // _audioSource.PlayOneShot(coinPickSound);
+            AudioSource.PlayClipAtPoint(coinPickSound, gameObject.transform.position);
             _gameManager.incrementCoinCounter(1);
             Destroy(gameObject);
         }
