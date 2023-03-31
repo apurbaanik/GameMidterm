@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
 
     public void incrementEnemyScoreCounter(int value){
         publicvar.enemyPoints += value;
-        enemyInterface.text = "Destruction Score: " + publicvar.enemyPoints;
+        enemyInterface.text = "Score: " + publicvar.enemyPoints;
     }
 
     public void decrementHealthCounter(int value){

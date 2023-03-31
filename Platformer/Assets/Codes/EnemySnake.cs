@@ -40,7 +40,6 @@ public class EnemySnake : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Bullet")){
-            // _audioSource.PlayOneShot(destroyedSound);
             AudioSource.PlayClipAtPoint(destroyedSound, gameObject.transform.position);
             Instantiate(deadParticleEffect, transform.position, Quaternion.identity);
             _gameManager.incrementEnemyScoreCounter(30);

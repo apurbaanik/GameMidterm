@@ -228,7 +228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioSource: {fileID: 147450223112243927}
-  destroyedSound: {fileID: 8300000, guid: f585b8f38249645a9a3076c2db2ddcac, type: 3}
+  destroyedSound: {fileID: 8300000, guid: 325e1eae95bb5431dac7534809c0b320, type: 3}
   deadParticleEffect: {fileID: 4165571638383224847, guid: c3384751abbb549c190d236a093b1bdb, type: 3}
 --- !u!61 &2810093162478603649
 BoxCollider2D:
