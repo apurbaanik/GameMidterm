@@ -22,6 +22,7 @@ public class UserControl : MonoBehaviour
     // Player audio variables
     public AudioSource _audioSource;
     public AudioClip shootSound;
+    public AudioClip hurtSound;
     public AudioClip deadSound;
     
     // Variables to manage jumping
@@ -94,6 +95,7 @@ public class UserControl : MonoBehaviour
         // Reload scene if you fall off the map
         if(_rigidbody.position.y < -20){
             _gameManager.decrementHealthCounter(1);
+            _audioSource.PlayOneShot(hurtSound);
             transform.position = new Vector2(-17, -5.26f);
         }
     }
