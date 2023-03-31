@@ -75,6 +75,12 @@ public class GameManager : MonoBehaviour
             Application.Quit();
         }
         #endif
+
+        if (Input.GetKeyDown(KeyCode.Return)) {
+            print("enter");
+            coins = totalItems;
+            nextLevel();
+        }
     }
 
     IEnumerator Wait5sec(float time) {
