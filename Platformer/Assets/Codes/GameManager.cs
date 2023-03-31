@@ -7,6 +7,7 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     int coins = 0;
+    int chickens = 0;
     
     
     public int health = 10;
@@ -36,10 +37,10 @@ public class GameManager : MonoBehaviour
     void Start()
     {        
         _audioSource = GetComponent<AudioSource>();
-        scoreInterface.text = "Eggs: " + coins + " / " + totalItems;
+        scoreInterface.text = "Eggs: " + coins;
         healthInterface.text = "Health: " + health;  
         enemyInterface.text = "Score: " + publicvar.enemyPoints;
-        chickenScoreInterface.text = "Chickens: " + publicvar.chickensCollected;
+        chickenScoreInterface.text = "Chickens: " + chickens + " / " + totalItems;
 
         door.SetActive(false);
     }
@@ -47,17 +48,18 @@ public class GameManager : MonoBehaviour
     public void incrementCoinCounter(int value){
         coins += value;
         publicvar.numberCoins += 1;
-        scoreInterface.text = "Eggs: " + coins + " / " + totalItems;
-        
-        if (coins == totalItems) {
-            print("done");
-            door.SetActive(true);
-        }
+        scoreInterface.text = "Eggs: " + coins;
     }
 
     public void incrementChickenCounter(int value){
         publicvar.chickensCollected += value;
-        chickenScoreInterface.text = "Chickens: " + publicvar.chickensCollected;
+        chickens += value;
+        chickenScoreInterface.text = "Chickens: " + chickens + " / " + totalItems;
+    
+        if (chickens == totalItems) {
+            print("done");
+            door.SetActive(true);
+        }
     }
 
     public void incrementEnemyScoreCounter(int value){
@@ -67,7 +69,8 @@ public class GameManager : MonoBehaviour
 
     public void decrementHealthCounter(int value){
         health -= value;
-        _audioSource.PlayOneShot(hurtPlayer);
+        // _audioSource.PlayOneShot(hurtPlayer);
+        AudioSource.PlayClipAtPoint(hurtPlayer, gameObject.transform.position);
         healthInterface.text = "Health: " + health;
     }
 
@@ -82,7 +85,7 @@ public class GameManager : MonoBehaviour
         #endif
 
         if (Input.GetKeyDown(KeyCode.Return)) {
-            coins = totalItems;
+            chickens = totalItems;
             nextLevel();
         }
     }
@@ -119,7 +122,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void nextLevel() {
-        if (coins == totalItems) {
+        if (chickens == totalItems) {
             if (level == 1) {
                 SceneManager.LoadScene("level 2");
             }
