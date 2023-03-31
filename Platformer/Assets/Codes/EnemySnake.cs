@@ -9,6 +9,7 @@ public class EnemySnake : MonoBehaviour
 
     public AudioSource _audioSource;
     public AudioClip destroyedSound;
+    public GameObject deadParticleEffect;
 
     Transform player;
 
@@ -40,6 +41,7 @@ public class EnemySnake : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Bullet")){
             _audioSource.PlayOneShot(destroyedSound);
+            Instantiate(deadParticleEffect, transform.position, Quaternion.identity);
             _gameManager.incrementEnemyScoreCounter(30);
             Destroy(gameObject);
             Destroy(other.gameObject);
