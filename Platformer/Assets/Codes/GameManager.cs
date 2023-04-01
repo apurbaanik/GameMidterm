@@ -8,8 +8,7 @@ public class GameManager : MonoBehaviour
 {
     int coins = 0;
     int chickens = 0;
-    
-    
+        
     public int health = 10;
     public int totalItems = 1;
     public int level;
@@ -21,6 +20,8 @@ public class GameManager : MonoBehaviour
 
     public TextMeshProUGUI chickenScoreInterface;
     public TextMeshProUGUI healthInterface;
+
+    public TextMeshProUGUI levelInterface;
 
     public AudioSource _audioSource;
     public AudioClip hurtPlayer;
@@ -37,7 +38,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {        
         _audioSource = GetComponent<AudioSource>();
-        scoreInterface.text = "Eggs: " + coins;
+        scoreInterface.text = "Eggs: " + publicvar.numberCoins;
         healthInterface.text = "Health: " + health;  
         enemyInterface.text = "Score: " + publicvar.enemyPoints;
         chickenScoreInterface.text = "Chickens: " + chickens + " / " + totalItems;
@@ -48,7 +49,7 @@ public class GameManager : MonoBehaviour
     public void incrementCoinCounter(int value){
         coins += value;
         publicvar.numberCoins += 1;
-        scoreInterface.text = "Eggs: " + coins;
+        scoreInterface.text = "Eggs: " + publicvar.numberCoins;
     }
 
     public void incrementChickenCounter(int value){
@@ -122,6 +123,8 @@ public class GameManager : MonoBehaviour
     }
 
     public void nextLevel() {
+        publicvar.maxLevel = level;
+
         if (chickens == totalItems) {
             if (level == 1) {
                 SceneManager.LoadScene("level 2");
