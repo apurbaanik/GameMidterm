@@ -11,30 +11,32 @@ public class ContactSpike : MonoBehaviour
     public AudioSource _audioSource;
     public AudioClip hurtPlayer;
 
-    void Start()
-    {
-        _audioSource = GetComponent<AudioSource>();
-        _gameManager = GameObject.FindObjectOfType<GameManager>();
-        _rigidbody2D = GetComponent<Rigidbody2D>();
-    }
+    // void Start()
+    // {
+    //     _audioSource = GetComponent<AudioSource>();
+    //     _gameManager = GameObject.FindObjectOfType<GameManager>();
+    //     _rigidbody2D = GetComponent<Rigidbody2D>();
+    // }
 
-    private void OnTriggerEnter2D(Collider2D other) {
-        if (other.CompareTag("Player")){
-            _audioSource.PlayOneShot(hurtPlayer);
-            // publicvar.playerDead = true;
-            _gameManager.decrementHealthCounter(1);
-            publicvar._animatorPlayer.SetTrigger("Dead");
-            StartCoroutine(Wait2sec(2f));
-            // publicvar._animatorPlayer.SetTrigger("FullDead");
-            // StartCoroutine(Wait5sec(2f));
-        }
-    }
+    // private void OnTriggerEnter2D(Collider2D other) {
+    //     if (other.CompareTag("Player")){
+    //         _audioSource.PlayOneShot(hurtPlayer);
+    //         // publicvar.playerDead = true;
+    //         _gameManager.decrementHealthCounter(1);
+    //         publicvar._animatorPlayer.SetTrigger("Dead");
+    //         StartCoroutine(Wait2sec(2f));
+    //         // publicvar._animatorPlayer.SetTrigger("FullDead");
+    //         // StartCoroutine(Wait5sec(2f));
+    //         Respawn();
 
-    IEnumerator Wait5sec(float time) {
-        yield return new WaitForSeconds(time);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-    IEnumerator Wait2sec(float time) {
-        yield return new WaitForSeconds(time);
-    }
+    //     }
+    // }
+
+    // IEnumerator Wait5sec(float time) {
+    //     yield return new WaitForSeconds(time);
+    //     SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    // }
+    // IEnumerator Wait2sec(float time) {
+    //     yield return new WaitForSeconds(time);
+    // }
 }

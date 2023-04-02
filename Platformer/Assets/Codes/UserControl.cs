@@ -31,7 +31,6 @@ public class UserControl : MonoBehaviour
     bool onTerrain = false;
 
     //Game Manager
-
     GameManager _gameManager;
 
     //Start
@@ -93,10 +92,24 @@ public class UserControl : MonoBehaviour
         // NOTE: GO TO game over screen after destroying
         
         // Reload scene if you fall off the map
-        if(_rigidbody.position.y < -20){
+        if(_rigidbody.position.y < -10){
             _gameManager.decrementHealthCounter(1);
             _audioSource.PlayOneShot(hurtSound);
             transform.position = new Vector2(-17, -5.26f);
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other) {
+        if (other.CompareTag("Spike")){
+            _audioSource.PlayOneShot(hurtSound);
+            _gameManager.decrementHealthCounter(1);
+            StartCoroutine(Wait2sec(2f));
+            transform.position = new Vector2(-17, -5.26f);
+
+        }
+    }
+    
+    IEnumerator Wait2sec(float time) {
+        yield return new WaitForSeconds(time);
     }
 }

@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     public AudioSource _audioSource;
     public AudioClip hurtPlayer;
 
+    public Vector2 _respawnPoint;
 
     private void Awake()
     {
