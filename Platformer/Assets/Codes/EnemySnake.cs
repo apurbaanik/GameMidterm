@@ -45,7 +45,7 @@ public class EnemySnake : MonoBehaviour
             Instantiate(deadParticleEffect, transform.position, Quaternion.identity);
             _gameManager.incrementEnemyScoreCounter(30);
             Destroy(other.gameObject);
-            StartCoroutine(Wait());
+            // StartCoroutine(Wait());
             Destroy(gameObject);
         }
     }

@@ -24,7 +24,7 @@ public class TrapCrocodile : MonoBehaviour
             Instantiate(deadParticleEffect, transform.position, Quaternion.identity);
             _gameManager.incrementEnemyScoreCounter(10);
             Destroy(other.gameObject);
-            StartCoroutine(Wait());
+            // StartCoroutine(Wait());
             Destroy(gameObject);
         }
     }

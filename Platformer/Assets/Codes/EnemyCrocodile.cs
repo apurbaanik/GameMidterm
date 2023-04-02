@@ -61,7 +61,7 @@ public class EnemyCrocodile : MonoBehaviour
             _gameManager.incrementEnemyScoreCounter(20);
             Destroy(other.gameObject);
             // gameObject.SetActive(false);
-            StartCoroutine(Wait());
+            // StartCoroutine(Wait());
             Destroy(gameObject);
         }
     }

@@ -45,7 +45,7 @@ public class EnemyFox : MonoBehaviour
             Instantiate(deadParticleEffect, transform.position, Quaternion.identity);
             _gameManager.incrementEnemyScoreCounter(40);
             Destroy(other.gameObject);
-            StartCoroutine(Wait());
+            // StartCoroutine(Wait());
             Destroy(gameObject);
         }
     }
