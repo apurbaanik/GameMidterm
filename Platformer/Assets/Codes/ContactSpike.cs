@@ -21,11 +21,12 @@ public class ContactSpike : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Player")){
             _audioSource.PlayOneShot(hurtPlayer);
-            publicvar.playerDead = true;
+            // publicvar.playerDead = true;
+            _gameManager.decrementHealthCounter(1);
             publicvar._animatorPlayer.SetTrigger("Dead");
             StartCoroutine(Wait2sec(2f));
-            publicvar._animatorPlayer.SetTrigger("FullDead");
-            StartCoroutine(Wait5sec(2f));
+            // publicvar._animatorPlayer.SetTrigger("FullDead");
+            // StartCoroutine(Wait5sec(2f));
         }
     }
 

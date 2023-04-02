@@ -102,7 +102,6 @@ public class GameManager : MonoBehaviour
         
         yield return new WaitForSeconds(time);
         SceneManager.LoadScene("EndGame");  
-        
     }
 
     void FixedUpdate() {
@@ -112,9 +111,6 @@ public class GameManager : MonoBehaviour
             StartCoroutine(Wait2sec(2f));
             publicvar._animatorPlayer.SetTrigger("FullDead");
             StartCoroutine(Wait5sec2(2f));
-            publicvar.enemyPoints = 0;
-            publicvar.chickensCollected = 0;
-            
         }
     }
 
