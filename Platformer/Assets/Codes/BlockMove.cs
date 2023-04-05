@@ -18,4 +18,16 @@ public class BlockMove : MonoBehaviour
         block.x += Mathf.Sin(Time.time * blockSpeed) * 4; // update the x axis with the speed
         transform.position = block; // change the position based on the updated x axis change
     }
+
+    void OnCollisionEnter2D(Collision2D other) {
+        if (other.gameObject.CompareTag("Player")){
+            other.transform.SetParent(transform);
+        }
+    }
+    
+    void OnCollisionExit2D(Collision2D collider) {
+        if (collider.gameObject.CompareTag("Player")){
+            collider.transform.SetParent(null);
+        }
+    }
 }
