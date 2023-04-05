@@ -15121,6 +15121,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5161617638857480365, guid: a221fd83c6e024248a6e7da95281dfdd, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161617638857480365, guid: a221fd83c6e024248a6e7da95281dfdd, type: 3}
+      propertyPath: m_Color.b
+      value: 0.6556604
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161617638857480365, guid: a221fd83c6e024248a6e7da95281dfdd, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6556604
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161617638857480365, guid: a221fd83c6e024248a6e7da95281dfdd, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5732687863017606343, guid: a221fd83c6e024248a6e7da95281dfdd, type: 3}
       propertyPath: m_Name
       value: DisappearingBlock2

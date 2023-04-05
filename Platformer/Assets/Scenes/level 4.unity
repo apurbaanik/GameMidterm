@@ -1410,6 +1410,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: DisappearingBlock4 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 9135540814066656744, guid: 96c5e1117322372408090b4348056db9, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135540814066656744, guid: 96c5e1117322372408090b4348056db9, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5294118
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135540814066656744, guid: 96c5e1117322372408090b4348056db9, type: 3}
+      propertyPath: m_Color.g
+      value: 0.5294118
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135540814066656744, guid: 96c5e1117322372408090b4348056db9, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8980392
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96c5e1117322372408090b4348056db9, type: 3}
 --- !u!4 &497642662 stripped
@@ -3883,6 +3899,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: DisappearingBlock4 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9135540814066656744, guid: 96c5e1117322372408090b4348056db9, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135540814066656744, guid: 96c5e1117322372408090b4348056db9, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5284354
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135540814066656744, guid: 96c5e1117322372408090b4348056db9, type: 3}
+      propertyPath: m_Color.g
+      value: 0.5284354
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135540814066656744, guid: 96c5e1117322372408090b4348056db9, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8962264
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96c5e1117322372408090b4348056db9, type: 3}
 --- !u!4 &1172245981 stripped
@@ -4252,6 +4284,22 @@ PrefabInstance:
     - target: {fileID: 7598725832110480230, guid: 96c5e1117322372408090b4348056db9, type: 3}
       propertyPath: m_Name
       value: DisappearingBlock4 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135540814066656744, guid: 96c5e1117322372408090b4348056db9, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135540814066656744, guid: 96c5e1117322372408090b4348056db9, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5294118
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135540814066656744, guid: 96c5e1117322372408090b4348056db9, type: 3}
+      propertyPath: m_Color.g
+      value: 0.5294118
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135540814066656744, guid: 96c5e1117322372408090b4348056db9, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8980392
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96c5e1117322372408090b4348056db9, type: 3}
@@ -5773,6 +5821,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: DisappearingBlock4 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 9135540814066656744, guid: 96c5e1117322372408090b4348056db9, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135540814066656744, guid: 96c5e1117322372408090b4348056db9, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5294118
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135540814066656744, guid: 96c5e1117322372408090b4348056db9, type: 3}
+      propertyPath: m_Color.g
+      value: 0.5294118
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135540814066656744, guid: 96c5e1117322372408090b4348056db9, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8980392
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96c5e1117322372408090b4348056db9, type: 3}
 --- !u!4 &1789517706 stripped
@@ -7021,6 +7085,22 @@ PrefabInstance:
     - target: {fileID: 7598725832110480230, guid: 96c5e1117322372408090b4348056db9, type: 3}
       propertyPath: m_Name
       value: DisappearingBlock4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135540814066656744, guid: 96c5e1117322372408090b4348056db9, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135540814066656744, guid: 96c5e1117322372408090b4348056db9, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5294118
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135540814066656744, guid: 96c5e1117322372408090b4348056db9, type: 3}
+      propertyPath: m_Color.g
+      value: 0.5294118
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135540814066656744, guid: 96c5e1117322372408090b4348056db9, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8980392
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96c5e1117322372408090b4348056db9, type: 3}
