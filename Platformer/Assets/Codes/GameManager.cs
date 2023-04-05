@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
@@ -27,6 +28,8 @@ public class GameManager : MonoBehaviour
     public AudioClip hurtPlayer;
 
     public Vector2 _respawnPoint;
+
+    public GameObject redDisplay;
 
     private void Awake()
     {
@@ -74,11 +77,22 @@ public class GameManager : MonoBehaviour
         // _audioSource.PlayOneShot(hurtPlayer);
         AudioSource.PlayClipAtPoint(hurtPlayer, gameObject.transform.position);
         healthInterface.text = "Health: " + health;
+
+        var imageAttribute =  redDisplay.GetComponent<Image>().color;
+        imageAttribute.a = 0.95f;
+        redDisplay.GetComponent<Image>().color = imageAttribute;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(redDisplay is not null){
+            if(redDisplay.GetComponent<Image>().color.a > 0){
+                var imageAttribute =  redDisplay.GetComponent<Image>().color;
+                imageAttribute.a = imageAttribute.a - 0.01f;
+                redDisplay.GetComponent<Image>().color = imageAttribute;
+            }
+        }
         #if !UNITY_WEBGL
         if (Input.GetKeyDown(KeyCode.Escape))
         {
