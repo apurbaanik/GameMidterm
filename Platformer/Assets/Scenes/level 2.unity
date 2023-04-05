@@ -293,7 +293,7 @@ MonoBehaviour:
   _audioSource: {fileID: 0}
   hurtPlayer: {fileID: 8300000, guid: 1499d99215b7e0f43864ca0b65087658, type: 3}
   _respawnPoint: {x: 0, y: 0}
-  redDisplay: {fileID: 0}
+  redDisplay: {fileID: 709424672}
 --- !u!4 &101261770
 Transform:
   m_ObjectHideFlags: 0

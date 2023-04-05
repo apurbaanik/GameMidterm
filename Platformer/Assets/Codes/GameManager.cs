@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {        
         _audioSource = GetComponent<AudioSource>();
-        scoreInterface.text = "Eggs: " + publicvar.numberCoins;
+        scoreInterface.text = "Eggs: " + publicvar.numberCoins + " / ?";
         healthInterface.text = "Health: " + health;  
         enemyInterface.text = "Score: " + publicvar.enemyPoints;
         chickenScoreInterface.text = "Chickens: " + chickens + " / " + totalItems;
@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
     public void incrementCoinCounter(int value){
         coins += value;
         publicvar.numberCoins += 1;
-        scoreInterface.text = "Eggs: " + publicvar.numberCoins;
+        scoreInterface.text = "Eggs: " + publicvar.numberCoins + " / ?";;
     }
 
     public void incrementChickenCounter(int value){
