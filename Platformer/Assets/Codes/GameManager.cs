@@ -115,10 +115,8 @@ public class GameManager : MonoBehaviour
     }
 
     IEnumerator Wait5sec(float time) {
-        
         yield return new WaitForSeconds(time);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);    
-        
     }
 
     IEnumerator Wait5sec2(float time) {
