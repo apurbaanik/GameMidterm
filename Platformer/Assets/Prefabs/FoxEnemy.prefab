@@ -124,8 +124,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c789d1daccb5c2a4db9283550d2932e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioSource: {fileID: 0}
-  hurtPlayer: {fileID: 8300000, guid: 49f2c0a7c64a0465a852bebc6b71b9ad, type: 3}
 --- !u!1 &6081294786415335618
 GameObject:
   m_ObjectHideFlags: 0
@@ -142,7 +140,7 @@ GameObject:
   - component: {fileID: -2559785856667979434}
   m_Layer: 7
   m_Name: FoxEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
