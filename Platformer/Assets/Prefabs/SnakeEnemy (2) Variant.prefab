@@ -95,6 +95,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SnakeEnemy (2) Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 2810093162478603650, guid: 84b1b05bfbd853c45916101ebb68f550, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 2810093162478603662, guid: 84b1b05bfbd853c45916101ebb68f550, type: 3}
       propertyPath: m_RootOrder
       value: 0

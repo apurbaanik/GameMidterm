@@ -76,6 +76,20 @@ public class UserControl : MonoBehaviour
     // Update
     void Update()
     {
+        // Vector3 infront = transform.TransformDirection(Vector3.forward);
+        // RaycastHit hit;
+        // if (Physics.Raycast(transform.position, infront, out hit, 5)){
+        //     if(!hit.transform.CompareTag("Enemy")){
+        //         publicvar.playerSeesEnemy = true;  
+        //         print("see");
+        //     }
+        //     else{
+        //         publicvar.playerSeesEnemy = false;
+        //         print("dont see");
+        //     }
+        // }
+        
+
         if(publicvar.playerDead) {
             _audioSource.PlayOneShot(deadSound);
             return;
@@ -91,8 +105,6 @@ public class UserControl : MonoBehaviour
 
         }
         
-
-        // NOTE: GO TO game over screen after destroying
         
         // Reload scene if you fall off the map
         if(_rigidbody.position.y < -10){

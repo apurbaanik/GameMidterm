@@ -8,7 +8,12 @@ public class MarketButton : MonoBehaviour
 {
     public string level = "level 3";
     public void Accept(){
-        publicvar.numberCoins = 0;
+        // coins = eggs
+        if (publicvar.numberCoins >= 8){
+            publicvar.tradeAccepted = true;
+            publicvar.numberCoins = 0;
+        }
+        
         SceneManager.LoadScene(level);
     }
 

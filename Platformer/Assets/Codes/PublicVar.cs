@@ -7,9 +7,13 @@ public static class publicvar
 {   
     public static bool collectedChickens = false;
     public static bool playerDead = false;
-    public static int numberCoins = 0;
+    public static int numberCoins = 8;
 
     public static int enemyPoints = 0;
+
+    public static bool tradeAccepted = false;
+
+    public static bool playerSeesEnemy = false;
 
     public static int chickensCollected = 0;
     public static int maxLevel = 0;
