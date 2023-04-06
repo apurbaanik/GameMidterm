@@ -96,9 +96,15 @@ public class UserControl : MonoBehaviour
         
         // Reload scene if you fall off the map
         if(_rigidbody.position.y < -10){
-            _gameManager.decrementHealthCounter(1);
-            _audioSource.PlayOneShot(hurtSound);
-            transform.position = new Vector2(-17, -5.26f);
+            if (SceneManager.GetActiveScene().name == "HowToPlay"){
+                transform.position = new Vector2(0.08f, -3f);
+            }
+
+            else {
+                _gameManager.decrementHealthCounter(1);
+                _audioSource.PlayOneShot(hurtSound);
+                transform.position = new Vector2(-17, -5.26f);
+            }
         }
     }
 
