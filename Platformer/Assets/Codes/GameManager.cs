@@ -62,7 +62,6 @@ public class GameManager : MonoBehaviour
         chickenScoreInterface.text = "Chickens: " + chickens + " / " + totalItems;
     
         if (chickens == totalItems) {
-            print("done");
             door.SetActive(true);
         }
     }
