@@ -14,5 +14,8 @@ public static class publicvar
     public static int chickensCollected = 0;
     public static int maxLevel = 0;
 
+    public static bool walkedUp = false;
+    public static bool conversationCompleted = false;
+
     public static Animator _animatorPlayer;
 }

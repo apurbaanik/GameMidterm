@@ -81,13 +81,16 @@ public class UserControl : MonoBehaviour
             return;
         }
 
-        if ((Input.GetKeyDown("e")) || (Input.GetMouseButtonDown(0))){
-        // if (Input.GetMouseButtonDown(0)){
+        if (SceneManager.GetActiveScene().name != "SecretScene"){
+            if ((Input.GetKeyDown("e")) || (Input.GetMouseButtonDown(0))){
             GameObject newBullet = Instantiate(bulletPrefab, spawnPoint.position, Quaternion.identity);
             newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(xDirection*bulletSpeed, 0)); 
             _audioSource.PlayOneShot(shootSound);
             _animator.SetTrigger("Shooting");
         }
+
+        }
+        
 
         // NOTE: GO TO game over screen after destroying
         
