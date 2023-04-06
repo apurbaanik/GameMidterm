@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
 
     public AudioSource _audioSource;
     public AudioClip hurtPlayer;
+    public AudioClip healPlayer;
 
     public Vector2 _respawnPoint;
 
@@ -82,6 +83,14 @@ public class GameManager : MonoBehaviour
         redDisplay.GetComponent<Image>().color = imageAttribute;
     }
 
+    public void incrementHealthCounter(int value){
+        health += value;
+        AudioSource.PlayClipAtPoint(healPlayer, gameObject.transform.position);
+        healthInterface.text = "Health: " + health;
+
+        
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -119,7 +128,7 @@ public class GameManager : MonoBehaviour
     }
 
     void FixedUpdate() {
-         if (health == 0 && !publicvar.playerDead){
+         if (health <= 0 && !publicvar.playerDead){
             publicvar.playerDead = true;
             publicvar._animatorPlayer.SetTrigger("Dead");
             StartCoroutine(Wait2sec(2f));

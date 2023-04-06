@@ -114,7 +114,7 @@ public class UserControl : MonoBehaviour
 
             else {
                 _gameManager.decrementHealthCounter(1);
-                _audioSource.PlayOneShot(hurtSound);
+                //_audioSource.PlayOneShot(hurtSound);
                 transform.position = new Vector2(-17, -5.26f);
             }
         }
