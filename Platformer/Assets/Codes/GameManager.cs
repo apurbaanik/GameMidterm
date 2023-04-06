@@ -156,7 +156,7 @@ public class GameManager : MonoBehaviour
                 SceneManager.LoadScene("level 4");
             }
             else {
-                SceneManager.LoadScene("EndGame");
+                SceneManager.LoadScene("WinGame");
             }
         }
         

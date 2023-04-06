@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SecretScene.unity
     guid: 12e0d35d6fb572741a13acf2e83dc08f
+  - enabled: 1
+    path: Assets/Scenes/WinGame.unity
+    guid: c731c9b135c75f343be95680351de74f
   m_configObjects: {}
