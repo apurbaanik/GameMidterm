@@ -20,7 +20,7 @@ public class CompanionChicken : MonoBehaviour
     
     public int movement = 4;
 
-    bool keepShooting = true;
+    // bool keepShooting = true;
 
 
     // Start is called before the first frame update

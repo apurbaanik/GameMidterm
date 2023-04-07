@@ -120,7 +120,6 @@ public class GameManager : MonoBehaviour
     }
 
     IEnumerator Wait5sec2(float time) {
-        
         yield return new WaitForSeconds(time);
         SceneManager.LoadScene("EndGame");  
     }

@@ -30,6 +30,8 @@ public class UserControl : MonoBehaviour
     public LayerMask terrain;
     bool onTerrain = false;
 
+    // public GameObject PlayerDead;
+
     //Game Manager
     GameManager _gameManager;
 
@@ -92,6 +94,7 @@ public class UserControl : MonoBehaviour
 
         if(publicvar.playerDead) {
             _audioSource.PlayOneShot(deadSound);
+            // Instantiate(PlayerDead, transform.position, Quaternion.identity);
             return;
         }
 
