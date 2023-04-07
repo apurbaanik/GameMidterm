@@ -43,6 +43,13 @@ public class GameManager : MonoBehaviour
          
     void Start()
     {        
+        if (SceneManager.GetActiveScene().name == "level 1") {
+            coins = 0;
+            chickens = 0;
+            publicvar.enemyPoints = 0;
+            publicvar.numberCoins = 0;
+        }
+
         _audioSource = GetComponent<AudioSource>();
         scoreInterface.text = "Eggs: " + publicvar.numberCoins;
         healthInterface.text = "Health: " + health;  
@@ -50,13 +57,6 @@ public class GameManager : MonoBehaviour
         chickenScoreInterface.text = "Chickens: " + chickens + " / " + totalItems;
 
         door.SetActive(false);
-
-        if (SceneManager.GetActiveScene().name == "level 1") {
-            coins = 0;
-            chickens = 0;
-            publicvar.enemyPoints = 0;
-            publicvar.numberCoins = 0;
-        }
 
         if (((SceneManager.GetActiveScene().name == "level 3") || (SceneManager.GetActiveScene().name == "level 4")) && (publicvar.tradeAccepted == true)) {
             chickenCompanion.SetActive(true);
@@ -151,6 +151,9 @@ public class GameManager : MonoBehaviour
             publicvar._animatorPlayer.SetTrigger("Dead");
             StartCoroutine(Wait2sec(2f));
             publicvar._animatorPlayer.SetTrigger("FullDead");
+            var imageAttribute =  redDisplay.GetComponent<Image>().color;
+            imageAttribute.a = 1.6f;
+            redDisplay.GetComponent<Image>().color = imageAttribute;
             StartCoroutine(Wait5sec2(2f));
         }
     }
