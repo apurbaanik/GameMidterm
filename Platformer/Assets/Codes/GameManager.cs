@@ -48,6 +48,7 @@ public class GameManager : MonoBehaviour
             chickens = 0;
             publicvar.enemyPoints = 0;
             publicvar.numberCoins = 0;
+            publicvar.tradeAccepted = false;
         }
 
         _audioSource = GetComponent<AudioSource>();
@@ -170,6 +171,7 @@ public class GameManager : MonoBehaviour
                 SceneManager.LoadScene("level 2");
             }
             else if (level == 2) {
+                publicvar.numberCoins = 8;
                 SceneManager.LoadScene("SecretScene");
             }
             else if (level == 5) {

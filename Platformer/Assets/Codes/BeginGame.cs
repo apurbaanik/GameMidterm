@@ -10,6 +10,7 @@ public class BeginGame : MonoBehaviour
         publicvar.chickensCollected = 0;
         publicvar.enemyPoints = 0;
         publicvar.maxLevel = 0;
+        publicvar.tradeAccepted = false;
         SceneManager.LoadScene("level 1");
     }
 
@@ -18,6 +19,7 @@ public class BeginGame : MonoBehaviour
         publicvar.chickensCollected = 0;
         publicvar.numberCoins = 0;
         publicvar.maxLevel = 0;
+        publicvar.tradeAccepted = false;
         SceneManager.LoadScene("StartGame");
     }
 }
