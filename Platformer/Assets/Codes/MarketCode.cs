@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class MarketCode : MonoBehaviour
 {
@@ -32,6 +33,13 @@ public class MarketCode : MonoBehaviour
         if (publicvar.conversationCompleted == true){
                 ButtonText.enabled = true;
                 publicvar._animatorPlayer.enabled = true;
+                if(Input.GetButtonDown("Jump")){
+                    if (publicvar.numberCoins >= 8){
+                        publicvar.tradeAccepted = true;
+                        publicvar.numberCoins = 0;
+                    }
+                    SceneManager.LoadScene("level 3");
+                }
             }
     }
 
