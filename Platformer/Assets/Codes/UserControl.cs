@@ -96,7 +96,7 @@ public class UserControl : MonoBehaviour
         }
 
         if (SceneManager.GetActiveScene().name != "SecretScene"){
-            if ((Input.GetKeyDown("e")) || (Input.GetMouseButtonDown(0))){
+            if ((Input.GetKeyDown("e")) || (Input.GetMouseButtonDown(0)) || Input.GetButtonDown("Fire1")){
             GameObject newBullet = Instantiate(bulletPrefab, spawnPoint.position, Quaternion.identity);
             newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(xDirection*bulletSpeed, 0)); 
             _audioSource.PlayOneShot(shootSound);

@@ -28,7 +28,7 @@ public class TalkWithPlayer : MonoBehaviour
     void Update()
     {
         
-        if(Input.GetMouseButtonDown(0) && publicvar.walkedUp == true){
+        if((Input.GetMouseButtonDown(0) || Input.GetButtonDown("Fire1")) && publicvar.walkedUp == true){
             
             if(UIobject.text == dialouge[position]){
                 if (position != dialouge.Length-1){
