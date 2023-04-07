@@ -9,8 +9,12 @@ MonoImporter:
   - enemyInterface: {instanceID: 0}
   - chickenScoreInterface: {instanceID: 0}
   - healthInterface: {instanceID: 0}
+  - levelInterface: {instanceID: 0}
   - _audioSource: {instanceID: 0}
   - hurtPlayer: {instanceID: 0}
+  - healPlayer: {instanceID: 0}
+  - redDisplay: {instanceID: 0}
+  - PlayerDead: {fileID: 7198483562665621317, guid: a948f4aebc305425b84020b336314ffe, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

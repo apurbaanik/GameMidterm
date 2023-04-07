@@ -10,7 +10,7 @@ public class EnemySnake : MonoBehaviour
     public AudioSource _audioSource;
     public AudioClip destroyedSound;
     public GameObject deadParticleEffect;
-
+    
     Transform player;
 
     void Start()
@@ -40,7 +40,6 @@ public class EnemySnake : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Bullet")){
-            
             AudioSource.PlayClipAtPoint(destroyedSound, gameObject.transform.position);
             Instantiate(deadParticleEffect, transform.position, Quaternion.identity);
             _gameManager.incrementEnemyScoreCounter(30);

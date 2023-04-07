@@ -2334,12 +2334,20 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1836100585510328104, guid: e80ca36459b7fbf4eb0d0b89554179f4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.69345
+      objectReference: {fileID: 0}
+    - target: {fileID: 1836100585510328104, guid: e80ca36459b7fbf4eb0d0b89554179f4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.6867
+      objectReference: {fileID: 0}
+    - target: {fileID: 1836100585510328104, guid: e80ca36459b7fbf4eb0d0b89554179f4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18.72
+      value: -18.6126
       objectReference: {fileID: 0}
     - target: {fileID: 1836100585510328104, guid: e80ca36459b7fbf4eb0d0b89554179f4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.02
+      value: -8.8697
       objectReference: {fileID: 0}
     - target: {fileID: 1836100585510328104, guid: e80ca36459b7fbf4eb0d0b89554179f4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5865,12 +5873,20 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1836100585510328104, guid: e80ca36459b7fbf4eb0d0b89554179f4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8045075
+      objectReference: {fileID: 0}
+    - target: {fileID: 1836100585510328104, guid: e80ca36459b7fbf4eb0d0b89554179f4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.77365124
+      objectReference: {fileID: 0}
+    - target: {fileID: 1836100585510328104, guid: e80ca36459b7fbf4eb0d0b89554179f4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 24.378588
+      value: 24.7991
       objectReference: {fileID: 0}
     - target: {fileID: 1836100585510328104, guid: e80ca36459b7fbf4eb0d0b89554179f4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.093114
+      value: -8.7797
       objectReference: {fileID: 0}
     - target: {fileID: 1836100585510328104, guid: e80ca36459b7fbf4eb0d0b89554179f4, type: 3}
       propertyPath: m_LocalPosition.z

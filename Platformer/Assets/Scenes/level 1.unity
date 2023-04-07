@@ -12972,6 +12972,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8654071811320312703, guid: 43784e02d157981428e6e8e8272c0eba, type: 3}
+      propertyPath: PlayerDead
+      value: 
+      objectReference: {fileID: 7198483562665621317, guid: a948f4aebc305425b84020b336314ffe, type: 3}
+    - target: {fileID: 8654071811320312703, guid: 43784e02d157981428e6e8e8272c0eba, type: 3}
       propertyPath: shootSound
       value: 
       objectReference: {fileID: 8300000, guid: 212041828d8a5c1438bab282ffa15ab3, type: 3}
