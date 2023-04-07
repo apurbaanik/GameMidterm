@@ -38,8 +38,8 @@ public class CompanionChicken : MonoBehaviour
             xDirection = transform.localScale.x;
             GameObject newBullet = Instantiate(bulletPrefab, spawnPointChicken.position, Quaternion.identity);
             newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(xDirection*bulletSpeed, 0)); 
-            _audioSource.PlayOneShot(shootSound);
-
+            // _audioSource.PlayOneShot(shootSound);
+            AudioSource.PlayClipAtPoint(shootSound, gameObject.transform.position);
         }
         
     }
@@ -68,8 +68,8 @@ public class CompanionChicken : MonoBehaviour
                     xDirection = transform.localScale.x;
                     GameObject newBullet = Instantiate(bulletPrefab, spawnPointChicken.position, Quaternion.identity);
                     newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(xDirection*bulletSpeed, 0)); 
-                    _audioSource.PlayOneShot(shootSound);
-
+                    // _audioSource.PlayOneShot(shootSound);
+                    AudioSource.PlayClipAtPoint(shootSound, gameObject.transform.position);
                 }
                 
                 //_animator.SetTrigger("Shooting");

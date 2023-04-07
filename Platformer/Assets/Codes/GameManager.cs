@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public int level;
 
     public GameObject door;
+    public GameObject chickenCompanion;
 
     public TextMeshProUGUI scoreInterface;
     public TextMeshProUGUI enemyInterface;
@@ -49,6 +50,20 @@ public class GameManager : MonoBehaviour
         chickenScoreInterface.text = "Chickens: " + chickens + " / " + totalItems;
 
         door.SetActive(false);
+
+        if (SceneManager.GetActiveScene().name == "level 1") {
+            coins = 0;
+            chickens = 0;
+            publicvar.enemyPoints = 0;
+            publicvar.numberCoins = 0;
+        }
+
+        if (((SceneManager.GetActiveScene().name == "level 3") || (SceneManager.GetActiveScene().name == "level 4")) && (publicvar.tradeAccepted == true)) {
+            chickenCompanion.SetActive(true);
+        }
+        else {
+            chickenCompanion.SetActive(false);
+        }
     }
 
     public void incrementCoinCounter(int value){
@@ -111,6 +126,12 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return)) {
             chickens = totalItems;
             nextLevel();
+        }
+
+        if ((SceneManager.GetActiveScene().name == "level 3") || (SceneManager.GetActiveScene().name == "level 4")) {
+            if (publicvar.tradeAccepted == true) {
+                chickenCompanion.SetActive(true);
+            }
         }
     }
 
